@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="lv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ping Pong Spēle</title>
+  <link rel="stylesheet" href="main.css">
+</head>
+<body>
+  <!-- Sākuma ekrāns -->
+  <div id="startScreen" style="display: flex; justify-content: center; align-items: center; height: 100vh; flex-direction: column;">
+    <h1 style="color: white;">Ping Pong Spēle</h1>
+    <button id="startBtn" style="padding: 15px 30px; font-size: 20px; background-color: #00cc99; color: white; border: none; cursor: pointer; border-radius: 8px;">
+      Sākt Spēli
+    </button>
+  </div>
+
+  <!-- Game Canvas -->
+  <canvas id="gameCanvas" width="800" height="600" style="background: #222;"></canvas>
+
+  <!-- Level Display -->
+  <div id="levelDisplay" style="position: absolute; top: 20px; left: 20px; font-size: 20px; color: white;">
+    Līmenis: <span id="level">1</span>
+  </div>
+
+  <!-- Pauze -->
+  <button id="pauseBtn" style="position: absolute; top: 20px; right: 20px; padding: 10px 20px; font-size: 18px; background-color: #FF4081; color: white; border: none; cursor: pointer; border-radius: 8px;">
+    Pauze
+  </button>
+
+  <!-- Game Over -->
+  <div id="gameOverScreen" style="display:none; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.85); display: flex; justify-content: center; align-items: center; z-index: 2;">
+    <div style="text-align: center; color: white; font-size: 30px;">
+      <h1>Game Over</h1>
+      <button id="restartBtn" style="padding: 10px 20px; font-size: 18px; background-color: #00cc99; color: white; border: none; cursor: pointer; border-radius: 8px;">Restartēt</button>
+    </div>
+  </div>
+
+  <!-- Skaņas -->
+  <audio id="hitSound" src="hit.mp3"></audio>
+  <audio id="brickSound" src="brick.mp3"></audio>
+  <audio id="winSound" src="win.mp3"></audio>
+  <audio id="loseSound" src="lose.mp3"></audio>
+
+  <script src="app.js"></script>
+</body>
+</html>
